@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CS275 Assignment 1</title>
+</head>
+<body>
+<p>In mathematics, the Fibonacci numbers are the numbers in the following integer sequence,
+    called the Fibonacci sequence, and characterized by the fact that every number after
+    the first two is the sum of the two preceding ones. By definition, the first two numbers
+    in the Fibonacci sequence are either 1 and 1, or 0 and 1, depending on the chosen starting
+    point of the sequence, and each subsequent number is the sum of the previous two.</p>
+<img src="https://www.geeksforgeeks.org/wp-content/uploads/fibonacci-sequence.png" height="300">
+<p/>
+<input type="text" id="input">
+<button type="button" onclick="buttonClick()">Compute</button>
+<div id="output"></div>
+</body>
+
+<script>
+    // Uses a series of logic to determine what to run on button click
+    // @method buttonClick
+    // @return nothing (all changes are done to HTML or other function calls)
+    function buttonClick(){
+        var fib = document.getElementById("input").value;
+
+        //check if input is valid
+        if(isNaN(fib)){
+            document.getElementById("output").innerText = "Invalid Input.";
+        }
+        else{
+            //check if input is negative
+            if(fib < 0){
+                document.getElementById("output").innerText = "Cannot compute Fib of a negative integer";
+            }
+
+            if(fib > -1){
+                createTable(fib);
+            }
+        }
+    }
+
+    // Calculates the n'th term of the fibonacci sequence
+    // @method calcFib
+    // @param {int} term - the desired term
+    // @return {int} the fibonacci number at the n'th term
+    function calcFib(term) {
+        if(term == 0) return 0;
+        if(term == 1) return 1;
+        else return calcFib(term - 1) + calcFib(term - 2);
+    }
+
+    // Creates the fibonacci table in the "output" div
+    // @method createTable
+    // @param {int} term - the highest term for the fibonacci number
+    // @return nothing (all changes are done to HTML)
+    function createTable(term){
+        var div = document.getElementById("output");
+        div.innerHTML = ""; //empty the div before putting the table in
+        var table = document.createElement("table");
+
+        //create the table headers
+        var header = table.insertRow(0);
+        header.insertCell(0).innerHTML = "<b>n</b>";
+        header.insertCell(1).innerHTML = "<b>fib(n)</b>";
+
+        //calculate fibs
+        for(var i=0; i<=term; i++){
+            var row = table.insertRow(i+1);
+            row.insertCell(0).innerHTML = i;
+            row.insertCell(1).innerHTML = calcFib(i);
+        }
+
+        div.appendChild(table);
+    }
+</script>
+</html>

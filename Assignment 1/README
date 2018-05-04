@@ -1,0 +1,14 @@
+ Abir Razzak - CS275 Assignment 1
+
+README
+
+To run the code properly, please type in an integer into the textbox and click the compute button. Failure to do so will result in an error message being displayed.
+
+How it works
+
+When clicking the compute button, the program will check what value is entered into the textbox. First it will run .isNAN() to check if the value is a number, after that the program will check to see if the number is positive or negative. If the number is negative, then the program will output an error message, if the number is positive it will run the createTable() method. If the text in the input box is not a number, an error message will be displayed.
+
+Functions
+
+Function descriptions are available in code.
+Upon button click, the buttonClick() function is ran to determine what to do with the input. If the input is NAN or negative then change the text in the div to display an error message. If the input is valid then run the createTable() function. The createTable() function will then empty the output div and create an empty table and add table headers. Then it will iterate every row calculating the fib(n) using the function calcFib(). Then lastly the table will be appended to the div to display to the user.

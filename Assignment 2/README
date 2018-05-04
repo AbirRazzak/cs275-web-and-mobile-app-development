@@ -1,0 +1,7 @@
+README by Abir Razzak
+
+How to use:
+After unzipping the folder, open amr439_HW2.html. Once the webpage loads, enter your wunderground key into the textbox, then click "Get the weather!". The webpage should load with the weather for the next 36 hours if your key is valid. Scroll and enjoy.
+
+How it works:
+The main component of the webpage is the button click. When the button is clicked, it calls buttonClick() which will take the input from the textbox and run a function called geoLookUp() which will take the input as an argument. geoLookUp() will then fetch the current zip code and run the function getHourlyFunction() which takes the input and the return value of geoLookUp() as arguments. getHourlyForcast() will look up the weather for the next 36 hours and display them in a table and append it to the output div.

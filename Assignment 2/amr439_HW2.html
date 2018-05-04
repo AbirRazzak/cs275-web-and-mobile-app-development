@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CS275 Assignment 2</title>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+    <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+    <script type="text/javascript" src="WeatherApi.js" defer></script>
+</head>
+<body>
+    <div data-role="page" align="center" data-tap-toggle="false">
+        <div data-role="header" data-position="fixed">
+            <h1>Assignment 2</h1>
+        </div>
+
+        <div data-role="content">
+            <input type="text" id="key" placeholder="Enter your Wunderground key"/>
+            <button class="ui-btn" onclick="buttonClick()">Get the weather!</button>
+            <div id="output"></div>
+        </div>
+
+        <div data-role="footer" data-position="fixed" data-tap-toggle="false">
+            <h1>CS 275</h1>
+        </div>
+    </div>
+</body>
+</html>
