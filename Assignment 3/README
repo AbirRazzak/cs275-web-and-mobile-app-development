@@ -1,0 +1,11 @@
+README by Abir Razzak
+
+How to run:
+1. Unzip folder
+2. Naviagte to folder in command line and run "node server.js"
+3. Connect to localhost:8080/ on your web browser
+4. Type in a number in the text box
+5. Select "Summation" or "Factorial" from the drop down menu
+6. Click the calculate button and watch the magic happen
+
+This is a simple node.js server that will calculate the summation or factorial using GET requests from Ajax calls on the web client.

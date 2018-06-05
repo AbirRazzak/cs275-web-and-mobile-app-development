@@ -1,0 +1,7 @@
+README by Abir Razzak
+
+How to run:
+1. Unzip folder
+2. Open terminal at folder
+3. Run 'node server.js' in terminal
+4. Load localhost:8080/ in web browser

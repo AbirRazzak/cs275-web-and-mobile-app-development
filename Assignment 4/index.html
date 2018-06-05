@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 4 - CS275</title>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="javascript.js" defer></script>
+</head>
+<body>
+
+<div data-role="page" align="center">
+
+    <div data-role="panel" id="myPanel">
+        <button onClick="window.location.reload();" data-rel="close" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-home">Home</button>
+        <button onclick="CalcOnClick()" data-rel="close" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-plus">Calculator</button>
+        <button onclick="WeatherOnClick()" data-rel="close" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-cloud">Weather</button>
+    </div>
+
+    <div data-role="header" data-position="fixed">
+        <a href="#myPanel" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-bars">Menu</a>
+        <h1>HW4</h1>
+    </div><!-- /header -->
+
+    <div role="main" class="ui-content" id="ContentDiv">
+        <p>The content area should initially give instructions on how to use the site and what it does (you’ll probably populate this after you get the remaining parts done). This should also appear when the user goes to “Home” within the menu.</p>
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+        <h1>Abir Razzak</h1>
+    </div><!-- /footer -->
+
+</div><!-- /page -->
+
+</body>
+</html>
